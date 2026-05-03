@@ -3,16 +3,16 @@
 ##  Project Title
 Exam Time Simulation using Java Servlet
 
-## 📖 Description
+##  Description
 This project simulates an online exam environment with a timer. It helps users practice answering questions within a fixed time limit and improves time management skills.
 
-## 🛠️ Technologies Used
+##  Technologies Used
 - Java
 - Servlets
 - HTML
 - Apache Tomcat
 
-## 📂 Project Structure
+##  Project Structure
 src/
  └── ExamTimerServlet.java
 
@@ -26,7 +26,7 @@ Screenshots/
  ├── screenshot2.png
  └── screenshot3.png
 
-## ⚙️ How to Run the Project
+## How to Run the Project
 1. Install Apache Tomcat Server
 2. Open Eclipse IDE
 3. Import the project
@@ -35,11 +35,11 @@ Screenshots/
 6. Open browser:
    http://localhost:8080/2bl23cs159-Exam-Time-Simulation
 
-## 📸 Screenshots
+##  Screenshots
 Screenshots are available in the Screenshots folder.
 
-## 👨‍💻 Author
+## Author
 Suma Biradar
 
-## ✅ Conclusion
+## Conclusion
 This project demonstrates how Java Servlets can be used to build a simple exam timer sys
