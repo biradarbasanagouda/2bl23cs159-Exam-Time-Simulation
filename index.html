@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Exam Timer Simulator</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #eef2f7;
+            margin: 0;
+            padding: 40px;
+        }
+        .card {
+            max-width: 520px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+            padding: 30px 35px;
+        }
+        h1 {
+            color: #1f3a68;
+            margin-top: 0;
+        }
+        p {
+            color: #444;
+            line-height: 1.5;
+        }
+        ul {
+            color: #444;
+            line-height: 1.6;
+        }
+        button {
+            background: #1f6feb;
+            color: #fff;
+            border: 0;
+            padding: 12px 22px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover { opacity: 0.9; }
+        .footer {
+            margin-top: 25px;
+            font-size: 13px;
+            color: #777;
+            text-align: center;
+        }
+        .badge {
+            display: inline-block;
+            background: #1f3a68;
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <span class="badge">Problem 73 &middot; HttpSession</span>
+        <h1>Simple Exam Timer Simulator</h1>
+
+        <p>
+            This application demonstrates the use of <b>HttpSession</b> in Java Servlets.
+            Click the button below to start an exam. The servlet will store the start
+            time in your session and show the elapsed time in <b>MM:SS</b> format on
+            every refresh.
+        </p>
+
+        <ul>
+            <li>Click <b>Start Exam</b> to begin the timer.</li>
+            <li>Click <b>Refresh</b> on the next page to update the elapsed time.</li>
+            <li>Click <b>End Exam</b> to stop the session and view your total time.</li>
+            <li>If 60 minutes pass, an <i>"Exam time over!"</i> message is shown.</li>
+        </ul>
+
+        <!-- Form sends the action=start parameter to the servlet -->
+        <form method="post" action="ExamTimerServlet">
+            <input type="hidden" name="action" value="start">
+            <button type="submit">Start Exam</button>
+        </form>
+
+        <div class="footer">
+            Suma Biradar &middot; 2BL23CS159 &middot; VI Sem CSE &middot; BLDEACET
+        </div>
+    </div>
+</body>
+</html>
