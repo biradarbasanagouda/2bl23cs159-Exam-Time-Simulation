@@ -40,13 +40,13 @@ retrieves the start time from the session and displays the elapsed time in
 ## Screenshots
 
 ### Input Form
-![Input Form](screenshots/screenshot1.png)
+<img width="1100" height="720" alt="screenshot1" src="https://github.com/user-attachments/assets/4ec9f14f-db9d-45c3-b71c-e12d3fd2b0a4" />
+
 
 ### Output / Result Page
-![Output Page](screenshots/screenshot2.png)
 
 ### Exam Ended Summary
-![Exam Ended](screenshots/screenshot3.png)
+
 
 ## Servlet Concept Practiced
 
