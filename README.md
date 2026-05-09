@@ -1,45 +1,64 @@
-# Exam Time Simulation - Servlet Project
+Simple Exam Timer Simulator (HttpSession)
 
-##  Project Title
-Exam Time Simulation using Java Servlet
+Student Details
 
-##  Description
-This project simulates an online exam environment with a timer. It helps users practice answering questions within a fixed time limit and improves time management skills.
+| Field         | Details                          |
+|---------------|----------------------------------|
+| Name          | Suma Biradar                     |
+| USN           | 2BL23CS159                       |
+| Branch        | Computer Science & Engineering   |
+| Semester      | VI Semester                      |
+| Subject       | Advanced Java Programming        |
+| Problem No.   | 
 
-##  Technologies Used
-- Java
-- Servlets
-- HTML
-- Apache Tomcat
+## Problem Statement
 
-##  Project Structure
-src/
- └── ExamTimerServlet.java
+This is a **Simple Exam Timer Simulator** built using Java Servlets and `HttpSession`.
+When the user clicks **Start Exam**, the servlet stores the current time
+(`System.currentTimeMillis()`) in the session. On every refresh, the servlet
+retrieves the start time from the session and displays the elapsed time in
+**MM:SS** format. If the elapsed time crosses **60 minutes**, an
+*"Exam time over!"* message is shown. The **End Exam** button calls
+`session.invalidate()` and shows a final summary of the total time taken.
 
-WebContent/
- ├── index.html
- └── WEB-INF/
-      └── web.xml
+## Technologies Used
 
-Screenshots/
- ├── screenshot1.png
- ├── screenshot2.png
- └── screenshot3.png
+- Java (Servlets â `jakarta.servlet`)
+- HTML, CSS (inline)
+- Apache Tomcat 10
+- Eclipse IDE for Enterprise Java Developers
 
-## How to Run the Project
-1. Install Apache Tomcat Server
-2. Open Eclipse IDE
-3. Import the project
-4. Configure Tomcat server
-5. Run the project on server
-6. Open browser:
-   http://localhost:8080/2bl23cs159-Exam-Time-Simulation
+## How to Run This Project
 
-##  Screenshots
-Screenshots are available in the Screenshots folder.
+1. Clone this repository or download the ZIP.
+2. Open Eclipse â **File â Import â Existing Projects into Workspace** and import this folder as a **Dynamic Web Project**.
+3. Add **Apache Tomcat 10** as the server in Eclipse (Window â Preferences â Server â Runtime Environments).
+4. Right-click the project â **Run As â Run on Server**.
+5. Open your browser and go to: `http://localhost:8080/ExamTimerServlet/index.html`
+6. Click **Start Exam**, refresh the page a few times to see the timer update, then click **End Exam** to view the summary.
 
-## Author
-Suma Biradar
+## Screenshots
 
-## Conclusion
-This project demonstrates how Java Servlets can be used to build a simple exam timer sys
+### Input Form
+![Input Form](screenshots/screenshot1.png)
+
+### Output / Result Page
+![Output Page](screenshots/screenshot2.png)
+
+### Exam Ended Summary
+![Exam Ended](screenshots/screenshot3.png)
+
+## Servlet Concept Practiced
+
+**HttpSession** â the servlet uses `request.getSession()` to create and
+retrieve a session, stores the exam start time as a session attribute
+(`examStart`) using `session.setAttribute(...)`, reads it back on every
+refresh with `session.getAttribute(...)`, and clears it with
+`session.invalidate()` when the user clicks **End Exam**.
+
+The project also demonstrates:
+
+- `doGet` and `doPost` handling in the same servlet
+- Reading a request parameter (`action`) to dispatch behaviour
+- Server-side input validation with a friendly error page
+- HTML response generation using `PrintWriter`
