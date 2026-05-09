@@ -44,8 +44,10 @@ retrieves the start time from the session and displays the elapsed time in
 
 
 ### Output / Result Page
+<img width="1100" height="720" alt="screenshot2" src="https://github.com/user-attachments/assets/bb1a4e79-7740-4510-85b6-c84702df6056" />
 
 ### Exam Ended Summary
+<img width="1100" height="720" alt="screenshot3" src="https://github.com/user-attachments/assets/c359b9ff-c9ab-4181-a34c-5f3dd09f607a" />
 
 
 ## Servlet Concept Practiced
